@@ -40,7 +40,7 @@ cd ula-os-clings
 2. **Ejecuta tu primer ejercicio:**
 Intentemos correr el primer ejercicio de la carpeta `00_intro`.
 ```bash
-./check.sh exercises/00_intro/01_welcome.c
+bash ./check.sh exercises/00_intro/01_welcome.c
 
 ```
 
@@ -59,7 +59,7 @@ Busca los comentarios que dicen `// TODO` o `// FIX ME`. Arregla el código.
 5. **Verifica de nuevo:**
 Vuelve a correr el script:
 ```bash
-./check.sh exercises/00_intro/01_welcome.c
+bash ./check.sh exercises/00_intro/01_welcome.c
 
 ```
 
