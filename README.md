@@ -31,8 +31,8 @@ sudo apt install build-essential gcc
 
 1. **Clona este repositorio:**
 ```bash
-git clone https://github.com/TU_USUARIO/ispsop-clings.git
-cd ispsop-clings
+git clone https://github.com/dimitrio-m/ula-os-clings
+cd ula-os-clings
 
 ```
 
