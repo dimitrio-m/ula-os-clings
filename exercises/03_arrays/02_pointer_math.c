@@ -1,18 +1,29 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {10, 20, 30, 40};
-    int *ptr = arr; // Apunta al 10
+    int data_stream[] = {10, 20, 30, 40, 50};
+    int *base_ptr = data_stream; 
 
-    // TODO: Sin usar arr[2], usa aritmética de punteros para obtener el 30.
-    // Recuerda: ptr + 1 avanza una posición (4 bytes), no 1 byte.
+    // INSTRUCCIÓN:
+    // Utilizando exclusivamente aritmética de punteros sobre 'base_ptr',
+    // calcula la dirección de memoria del elemento cuyo valor original es 30
+    // y asígnala a 'target_ptr'.
+    // RESTRICCIÓN: Tienes estrictamente prohibido usar el operador de indexación '[]'.
     
-    int *ptr_al_30 = ptr; // <--- MODIFICA ESTA LÍNEA (ej: ptr + algo)
+    int *target_ptr = base_ptr; // <--- MODIFICA ESTA LÍNEA
 
-    if (*ptr_al_30 == 30) {
-        printf("¡Correcto! Accediste a %d usando matemáticas.\n", *ptr_al_30);
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
+    if (target_ptr != NULL) {
+        // Sobrescribimos la memoria en la dirección que calculaste
+        *target_ptr = 999; 
+    }
+
+    // Verificamos si la sobrescritura ocurrió en la posición correcta del arreglo
+    if (data_stream[2] == 999) {
+        printf("✅ Correcto. Dominas el desplazamiento en bloques de memoria.\n");
         return 0;
     }
-    printf("Incorrecto. Apuntas a %d\n", *ptr_al_30);
+
+    printf("❌ Desplazamiento incorrecto. Modificaste la región de memoria equivocada.\n");
     return 1;
 }

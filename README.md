@@ -1,4 +1,4 @@
-# 🦀 ISPSOP C-Lings: Domina C sin Miedo
+# 🦀 ISPSOP C-Lings: Prácticas en C
 
 > **Materia:** Sistemas Operativos (ISPSOP)
 > **Profesor:** Dimitrio Mandamadiotis
@@ -71,6 +71,8 @@ Si ves el mensaje verde, ¡felicidades! Pasa al siguiente archivo.
 ## 🗺️ Mapa de Ejercicios
 
 Los ejercicios están ordenados por dificultad. No te saltes secciones.
+
+(POR MEJORAR)
 
 ### 🐣 Nivel 1: Calentamiento
 

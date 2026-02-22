@@ -1,17 +1,29 @@
 #include <stdio.h>
 
 int main() {
-    int *ptr = NULL;
-    int data = 100;
+    int safe_data = 100;
+    int *danger_ptr = NULL;
 
-    // TODO: Este código va a explotar (Segmentation Fault) porque intentamos
-    // leer de un puntero NULL.
-    // Asigna la dirección de 'data' a 'ptr' antes de que el código llegue al printf.
+    // INSTRUCCIÓN:
+    // Escribe el código necesario para redirigir el flujo y evitar un 
+    // fallo de segmentación (Segmentation Fault) en la zona de validación.
+    // RESTRICCIÓN: Tienes estrictamente prohibido modificar las líneas de 
+    // declaración inicial de las variables.
     
-    // --- ARREGLA AQUÍ ---
+    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
     
-    // --------------------
 
-    printf("El valor es: %d\n", *ptr);
-    return 0;
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
+    if (danger_ptr == NULL) {
+        printf("❌ Segmentation Fault (Simulado). El puntero intentó acceder a la dirección 0x0.\n");
+        return 1;
+    }
+
+    if (*danger_ptr == 100) {
+        printf("✅ Correcto. Has redirigido el puntero a una región de memoria válida y segura.\n");
+        return 0;
+    }
+
+    printf("❌ El puntero no es nulo, pero no apunta al dato esperado.\n");
+    return 1;
 }

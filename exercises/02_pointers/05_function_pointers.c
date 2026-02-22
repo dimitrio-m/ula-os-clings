@@ -1,22 +1,35 @@
 #include <stdio.h>
 
-void say_hello() {
-    printf("¡Hola desde la función!\n");
+int execution_flag = 0x0000;
+
+void secure_routine() {
+    execution_flag = 0x1A2B;
 }
 
-void execute_task(void (*task_func)()) {
-    // TODO: Ejecuta la función que recibiste como parámetro.
-    // Solo tienes que llamarla.
+void delegate_execution(void (*callback)()) {
+    // INSTRUCCIÓN 1:
+    // Ejecuta la rutina que ha sido delegada a través del parámetro 'callback'.
+    // RESTRICCIÓN: Tienes estrictamente prohibido llamar a 'secure_routine' 
+    // de forma explícita o directa dentro de esta función.
     
-    // ... tu código aquí ...
+    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    
 }
 
 int main() {
-    // Pasamos la dirección de 'say_hello' a 'execute_task'
-    // TODO: Descomenta y arregla la llamada dentro de execute_task
+    // INSTRUCCIÓN 2:
+    // Invoca la función 'delegate_execution' para que administre la 
+    // ejecución de 'secure_routine'.
     
-    execute_task(say_hello); 
+    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
     
-    // Si el programa no explota y compila, asumimos éxito para este ejercicio básico
-    return 0;
+
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
+    if (execution_flag == 0x1A2B) {
+        printf("✅ Correcto. Dominas el salto de ejecución dinámico mediante callbacks.\n");
+        return 0;
+    }
+
+    printf("❌ Fallo de delegación. El flujo de ejecución nunca alcanzó la rutina objetivo.\n");
+    return 1;
 }

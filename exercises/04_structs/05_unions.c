@@ -1,31 +1,27 @@
 #include <stdio.h>
 #include <stdint.h>
 
-// Una unión comparte el MISMO espacio de memoria para todos sus campos.
 union HardwareRegister {
-    uint32_t full_value; // 4 bytes (ej: 0xAABBCCDD)
-    uint8_t bytes[4];    // Array de 4 bytes individuales
+    uint32_t full_value;
+    uint8_t bytes[4];
 };
 
 int main() {
     union HardwareRegister reg;
-    
-    // Asignamos un valor hexadecimal grande (4 bytes)
     reg.full_value = 0xFF00AA11;
 
-    // TODO: Accede al byte menos significativo (el último a la derecha, 0x11).
-    // En arquitectura Little Endian, suele ser el byte[0].
-    // Usa la "vista" de array de la unión para sacar ese valor.
+    // INSTRUCCIÓN:
+    // Extrae el byte menos significativo de 'full_value' utilizando 
+    // exclusivamente el arreglo 'bytes' de la unión. Asigna el resultado a 'low_byte'.
     
-    uint8_t low_byte = 0; // <--- CAMBIA ESTO (ej: reg.bytes[0])
+    uint8_t low_byte = 0; // <--- MODIFICA ESTA LÍNEA
 
-    printf("El byte bajo es: 0x%X\n", low_byte);
-
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (low_byte == 0x11) {
-        printf("✅ Entendiste cómo las Unions solapan memoria.\n");
+        printf("✅ Correcto. Comprendes el solapamiento de memoria y el Endianness de tu arquitectura.\n");
         return 0;
     }
     
-    printf("❌ Esperaba 0x11 (17 decimal).\n");
+    printf("❌ Fallo en la lectura del registro.\n");
     return 1;
 }

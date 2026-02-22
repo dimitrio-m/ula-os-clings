@@ -1,28 +1,27 @@
 #include <stdio.h>
 
-struct PackedData {
-    char a; // 1 byte
-    int b;  // 4 bytes
+struct RawData {
+    char a;
+    int b;
 };
 
 int main() {
-    // Matemáticamente: 1 char (1) + 1 int (4) = 5 bytes.
-    // Pero en arquitectura de 64 bits, el CPU prefiere leer bloques de 4 u 8 bytes.
-    // Por eso añade "padding" (relleno) después del char.
+    struct RawData data;
     
-    struct PackedData data;
+    // INSTRUCCIÓN:
+    // El código actual asume un tamaño de 5 bytes, lo cual provocará que el programa falle.
+    // Corrige el valor de la variable 'expected_size' para que el programa termine con éxito.
+    // 
+    // RESTRICCIÓN: Tienes estrictamente prohibido usar el operador sizeof() 
+    // para asignar este valor. Debes analizar la estructura y escribir el literal entero exacto.
 
-    printf("Tamaño real en memoria: %lu bytes\n", sizeof(data));
+    int expected_size = 5; // <--- MODIFICA ESTE VALOR
 
-    // TODO: Cambia la condición del IF.
-    // NO ES 5. Adivina cuánto es (usualmente es el múltiplo de 4 más cercano).
-    // O usa sizeof() en la condición para que sea siempre correcto.
-    
-    if (sizeof(data) == 5) { // <--- ESTO ESTÁ MAL, CAMBIALO
-        printf("❌ Matemáticas puras, pero incorrecto en Sistemas.\n");
+    if (sizeof(data) != expected_size) { 
+        printf("❌ Error. Asumiste %d bytes, pero la memoria real ocupada es distinta.\n", expected_size);
         return 1;
     } 
     
-    printf("✅ Entendiste el Memory Padding. Tamaño real: %lu\n", sizeof(data));
+    printf("✅ Superado. Entiendes la estructura real de los datos en memoria.\n");
     return 0;
 }

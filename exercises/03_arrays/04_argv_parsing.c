@@ -1,18 +1,22 @@
 #include <stdio.h>
 
 int main() {
-    // Simulamos lo que recibe el main: un array de cadenas
-    char *args[] = {"ls", "-l", "-a", NULL}; 
+    char *cmd_args[] = {"/usr/bin/daemon", "--verbose", "--port=8080", NULL}; 
 
-    // TODO: Queremos acceder al tercer argumento ("-a").
-    // Recuerda: args[0] es "ls".
+    // INSTRUCCIÓN:
+    // Extrae el argumento que contiene la configuración del puerto desde el 
+    // vector de argumentos 'cmd_args' y asígnalo al puntero 'target_arg'.
+    // RESTRICCIÓN: Tienes estrictamente prohibido usar cadenas de texto literales 
+    // en tu respuesta (ej: no puedes escribir "--port=8080").
     
-    char *target = "nada"; // <--- CAMBIA ESTO (usa args)
+    char *target_arg = NULL; // <--- MODIFICA ESTA LÍNEA
 
-    // Validación simple del primer caracter
-    if (target[1] == 'a') { 
-        printf("✅ Encontraste el argumento '-a'.\n");
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
+    if (target_arg != NULL && target_arg[2] == 'p' && target_arg[7] == '8') {
+        printf("✅ Correcto. Comprendes la estructura de punteros dobles del vector de argumentos.\n");
         return 0;
     }
+
+    printf("❌ Argumento no encontrado o puntero inválido.\n");
     return 1;
 }

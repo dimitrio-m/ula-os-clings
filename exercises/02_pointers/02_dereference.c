@@ -1,20 +1,24 @@
 #include <stdio.h>
-#include <assert.h>
 
 int main() {
-    int target = 10;
-    int *ptr = &target;
+    int secure_flag = 0x0;
+    int *access_port = &secure_flag;
 
-    // TODO: Usa el puntero 'ptr' para cambiar el valor de 'target' a 50.
-    // No puedes escribir 'target = 50;'. Debes usar el operador '*' (dereferencia).
+    // INSTRUCCIÓN:
+    // Escribe el valor hexadecimal 0xDEADBEEF en la dirección de memoria 
+    // a la que apunta 'access_port'.
+    // RESTRICCIÓN: Tienes estrictamente prohibido utilizar, nombrar o reasignar la 
+    // variable 'secure_flag' directamente.
     
-    // ESCRIBE TU CÓDIGO AQUÍ:
+    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    
 
-
-    if (target == 50) {
-        printf("¡Excelente! Cambiaste el valor remotamente.\n");
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
+    if (secure_flag == 0xDEADBEEF) {
+        printf("✅ Correcto. Operación de escritura indirecta (dereferencia) exitosa.\n");
         return 0;
     }
-    printf("Fallaste. Target sigue valiendo %d\n", target);
+
+    printf("❌ Acceso denegado. El flag de seguridad no fue modificado en memoria.\n");
     return 1;
 }

@@ -12,16 +12,11 @@ int main() {
     // Inicialización
     struct Student s1;
     
-    // TODO: Asigna los valores:
-    // name -> "Juan"
-    // age -> 20
-    // average -> 19.5
+    // TODO: Asigna los valores para pasar el test
     
-    // Pista: Para strings usa strcpy(destino, fuente) o snprintf.
-    // s1.age = ...
     
     // VALIDACIÓN:
-    if (s1.age == 20 && s1.average > 19.0) {
+    if (s1.age == 20 && s1.average > 19.0 && strcmp(s1.name, "Alice") == 0) {
         printf("✅ Estudiante creado correctamente.\n");
         return 0;
     }

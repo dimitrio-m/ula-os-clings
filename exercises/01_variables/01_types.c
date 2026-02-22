@@ -4,15 +4,20 @@ int main() {
     int a = 10;
     float b = 5.5;
     
-    // TODO: Queremos imprimir la suma, pero el especificador de formato está mal.
-    // %d es para enteros decimales. ¿Cuál es para punto flotante?
     float suma = a + b;
 
-    // CAMBIA LA SIGUIENTE LÍNEA:
-    printf("La suma es: %d\n", suma);
+    // INSTRUCCIÓN:
+    // La siguiente llamada a 'printf' provocará un comportamiento indefinido 
+    // y mostrará basura en pantalla debido a un desajuste de tipos (Type Mismatch). 
+    // Corrige el especificador de formato para que imprima el valor con 
+    // exactamente una posición decimal.
+    
+    printf("La suma es: %d\n", suma); // <--- MODIFICA ESTA LÍNEA
 
-    if (suma == 15.5) {
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
+    if (suma == 15.5f) {
         return 0;
     }
+    
     return 1;
 }

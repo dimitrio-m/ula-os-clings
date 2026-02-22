@@ -1,18 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    int val = 42;
-    int *ptr1 = &val;
-    int **ptr2 = &ptr1; // Puntero a puntero
+    int core_data = 0xAA;
+    int *l1_ptr = &core_data;
+    int **l2_ptr = &l1_ptr;
 
-    // TODO: Accede al valor 42 usando SOLO ptr2.
-    // Necesitas de-referenciar dos veces.
+    // INSTRUCCIÓN:
+    // Sobrescribe el valor almacenado en la memoria base (core_data) 
+    // asignándole el valor hexadecimal 0xFF.
+    // RESTRICCIÓN: Tienes estrictamente prohibido utilizar, leer o referenciar 
+    // las variables 'core_data' o 'l1_ptr' en tu solución. 
+    // Debes operar exclusivamente a través de 'l2_ptr'.
     
-    int result = 0; // <--- CAMBIA ESTO (ej: **ptr2)
+    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    
 
-    if (result == 42) {
-        printf("✅ Entendiste la indirección múltiple.\n");
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
+    if (core_data == 0xFF) {
+        printf("✅ Correcto. Dominas la indirección múltiple y la navegación de punteros encadenados.\n");
         return 0;
     }
+
+    printf("❌ Fallo de indirección. El valor en la memoria base original no fue alterado.\n");
     return 1;
 }

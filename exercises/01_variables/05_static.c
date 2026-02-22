@@ -1,28 +1,29 @@
 #include <stdio.h>
 
-// Esta función simula un contador de visitas a un servidor
-int contar_visitas() {
-    // TODO: Cada vez que llamamos a esta función, la variable 'visitas'
-    // se crea de nuevo en el Stack y se inicializa en 0.
-    // Queremos que la variable RECUERDE su valor entre llamadas.
-    // Pista: Agrega la palabra clave 'static' antes del tipo de dato.
+int process_request() {
+    // INSTRUCCIÓN:
+    // Modifica la declaración de la variable 'request_count' para que 
+    // conserve su valor en memoria entre múltiples invocaciones a esta función.
+    // RESTRICCIÓN: Tienes estrictamente prohibido mover la variable fuera de 
+    // la función (no puede ser global).
     
-    int visitas = 0; // <--- MODIFICA ESTA LÍNEA
-    visitas++;
-    return visitas;
+    int request_count = 0; // <--- MODIFICA ESTA LÍNEA
+    
+    request_count++;
+    return request_count;
 }
 
 int main() {
-    printf("Visita 1: %d\n", contar_visitas());
-    printf("Visita 2: %d\n", contar_visitas());
-    printf("Visita 3: %d\n", contar_visitas());
+    process_request();
+    process_request();
+    process_request();
 
-    // Si funciona bien, la tercera visita debe devolver 3.
-    if (contar_visitas() == 4) {
-        printf("✅ ¡Correcto! La variable persiste en memoria.\n");
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
+    if (process_request() == 4) {
+        printf("✅ Correcto. Dominas la persistencia del estado local y su ciclo de vida.\n");
         return 0;
     }
 
-    printf("❌ La variable está perdiendo la memoria (siempre vale 1).\n");
+    printf("❌ Fallo de estado. La variable pierde su memoria en cada invocación.\n");
     return 1;
 }

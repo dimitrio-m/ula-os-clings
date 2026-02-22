@@ -1,21 +1,22 @@
 #include <stdio.h>
+#include <stddef.h>
 
 int main() {
-    int entero = 42;
-    double decimal = 3.14159;
+    long memory_blocks[128];
 
-    // En arquitectura de 64 bits (x86_64), un int suele ser 4 bytes
-    // y un double suele ser 8 bytes.
+    // INSTRUCCIÓN:
+    // Calcula dinámicamente la cantidad de elementos del arreglo 'memory_blocks' 
+    // utilizando el operador 'sizeof'. 
+    // RESTRICCIÓN: Tienes estrictamente prohibido escribir el número 128.
     
-    printf("Tamaño de int: %lu bytes\n", sizeof(entero));
-    printf("Tamaño de double: %lu bytes\n", sizeof(decimal));
+    size_t array_length = 0; // <--- MODIFICA ESTA LÍNEA
 
-    // TODO: Haz que esta condición sea verdadera verificando los tamaños
-    if (sizeof(decimal) < sizeof(entero)) { 
-        printf("¡Algo anda mal con tu lógica de tamaños!\n");
-        return 1;
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
+    if (array_length == 128) {
+        printf("✅ Correcto. Dominas el cálculo de longitudes de arreglos en tiempo de compilación.\n");
+        return 0;
     }
 
-    printf("¡Correcto! El double ocupa más memoria (o igual) que el int.\n");
-    return 0;
+    printf("❌ Tamaño calculado incorrectamente. Revisa tu aritmética de punteros/tamaños.\n");
+    return 1;
 }

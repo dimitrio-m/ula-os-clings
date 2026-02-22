@@ -1,28 +1,29 @@
 #include <stdio.h>
 
-// Definimos un Nodo para una lista enlazada de Procesos
 struct Process {
     int pid;
-    // TODO: Falta el puntero al siguiente proceso.
-    // No puede ser 'struct Process next;', tiene que ser un PUNTERO.
-    // Defínelo aquí abajo llamándolo 'next'.
     
-    struct Process *next; // <--- (El estudiante debe escribir esto, o algo similar)
+    // INSTRUCCIÓN 1:
+    // Declara un miembro llamado 'next' capaz de almacenar la 
+    // dirección de memoria de otra estructura 'Process'.
+    
 };
 
 int main() {
     struct Process p1 = {101, NULL};
     struct Process p2 = {102, NULL};
 
-    // TODO: Enlaza p1 con p2.
-    // Haz que el campo 'next' de p1 apunte a la DIRECCIÓN de p2.
+    // INSTRUCCIÓN 2:
+    // Modifica 'p1' para que su miembro 'next' apunte a 'p2'.
     
-    // p1.next = ...
-
+    
+    
+    // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (p1.next == &p2 && p1.next->pid == 102) {
-        printf("✅ ¡Conexión exitosa! p1 sabe quién es p2.\n");
+        printf("✅ ¡Conexión exitosa! El bloque de control de procesos está enlazado.\n");
         return 0;
     }
 
+    printf("❌ Error de segmentación o enlace incorrecto.\n");
     return 1;
 }

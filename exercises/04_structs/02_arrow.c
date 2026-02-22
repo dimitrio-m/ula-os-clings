@@ -13,8 +13,6 @@ int main() {
     // TODO: Modifica 'x' usando el PUNTERO 'ptr', no la variable 'p1'.
     // Intenta usar el operador flecha (->).
     // Queremos que x pase de 10 a 100.
-    
-    // ptr... = 100;  <-- ARREGLA ESTO
 
     if (p1.x == 100) {
         printf("✅ Usaste la flecha correctamente.\n");
