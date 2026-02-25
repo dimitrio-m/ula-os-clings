@@ -116,10 +116,4 @@ Si tu código compila pero tienes una "fuga de memoria" (no hiciste `free`) o in
 
 *"Talk is cheap. Show me the code."* - Linus Torvalds
 
----
 
-### ✅ Siguiente paso
-
-Ya tienes el nombre (`ispsop-clings`), el `README.md` y el script `check.sh` (que hicimos en el paso anterior).
-
-El repositorio está vacío de contenido. **¿Quieres que genere ahora el código de los primeros 10 ejercicios (Nivel 1 y 2) para que solo tengas que guardar los archivos `.c`?**
