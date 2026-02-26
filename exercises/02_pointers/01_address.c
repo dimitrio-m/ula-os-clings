@@ -9,6 +9,7 @@ int main() {
     // al puntero 'memory_ptr'.
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    memory_ptr = &target_register;
     
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---

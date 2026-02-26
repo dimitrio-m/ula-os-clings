@@ -11,6 +11,7 @@ int main() {
     // declaración inicial de las variables.
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    danger_ptr = &safe_data;
     
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
