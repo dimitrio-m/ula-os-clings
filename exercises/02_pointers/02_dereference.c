@@ -14,7 +14,7 @@ int main() {
     
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
-    if (secure_flag == 0xDEADBEEF) {
+    if (secure_flag == (int)0xDEADBEEF) {
         printf("✅ Correcto. Operación de escritura indirecta (dereferencia) exitosa.\n");
         return 0;
     }
