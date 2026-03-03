@@ -9,7 +9,7 @@ int main() {
     // utilizando el operador 'sizeof'. 
     // RESTRICCIÓN: Tienes estrictamente prohibido escribir el número 128.
     
-    size_t array_length = 0; // <--- MODIFICA ESTA LÍNEA
+    size_t array_length = sizeof(memory_blocks) / sizeof(long); // <--- MODIFICA ESTA LÍNEA
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (array_length == 128) {
