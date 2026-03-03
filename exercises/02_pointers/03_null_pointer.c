@@ -12,6 +12,7 @@ int main() {
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
     
+    danger_ptr = &safe_data;
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (danger_ptr == NULL) {

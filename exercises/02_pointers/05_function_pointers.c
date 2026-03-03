@@ -11,7 +11,7 @@ void delegate_execution(void (*callback)()) {
     // Ejecuta la rutina que ha sido delegada a través del parámetro 'callback'.
     // RESTRICCIÓN: Tienes estrictamente prohibido llamar a 'secure_routine' 
     // de forma explícita o directa dentro de esta función.
-    
+    callback();
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
     
 }
@@ -22,7 +22,7 @@ int main() {
     // ejecución de 'secure_routine'.
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
-    
+    delegate_execution(secure_routine);
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (execution_flag == 0x1A2B) {

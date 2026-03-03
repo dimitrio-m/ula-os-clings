@@ -10,6 +10,7 @@ int main() {
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
     
+    memory_ptr = &target_register;
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (memory_ptr != NULL) {
