@@ -18,7 +18,7 @@ int main() {
     int checksum = 0;
     for (int i = 0; i < 5; i++) checksum += buffer_b[i];
 
-    if (checksum == 150 && buffer_b[0] == 0x10 && buffer_b[4] == 0x50) {
+    if (checksum == 0xf0 && buffer_b[0] == 0x10 && buffer_b[4] == 0x50) {
         printf("✅ Correcto. Has replicado la estructura de memoria manualmente.\n");
         return 0;
     }
