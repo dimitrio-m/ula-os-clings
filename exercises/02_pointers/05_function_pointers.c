@@ -14,6 +14,7 @@ void delegate_execution(void (*callback)()) {
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
     
+    (*callback)();
 }
 
 int main() {
@@ -23,6 +24,7 @@ int main() {
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
     
+    delegate_execution(secure_routine);
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (execution_flag == 0x1A2B) {
