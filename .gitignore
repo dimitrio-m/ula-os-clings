@@ -1,0 +1,11 @@
+# Ignorar la carpeta de configuración de VS Code
+.vscode/
+
+# Ignorar archivos generados al compilar/hacer debug
+*.exe
+*.out
+*.o
+*.obj
+bin/
+obj/
+debug/

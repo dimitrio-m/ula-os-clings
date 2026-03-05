@@ -16,7 +16,7 @@ int main() {
 
     // Liberamos la memoria porque el usuario "se desconectó"
     free(u);
-
+    u = NULL;
     // ---------------------------------------------------------
     // CÓDIGO VULNERABLE
     // 'u' es ahora un "Dangling Pointer" (Puntero colgante).
@@ -40,5 +40,9 @@ int main() {
     }
 
     printf("✅ Seguro. El puntero fue anulado después del free.\n");
+
+    free(hack);
+    hack= NULL;
+    
     return 0;
 }

@@ -7,7 +7,7 @@ int main() {
     // el desbordamiento aritmético (Integer Overflow) que ocurre en la suma.
     // RESTRICCIÓN: Tienes estrictamente prohibido alterar los valores numéricos 255 y 5.
 
-    uint8_t sensor_value = 255; // <--- MODIFICA ESTA LÍNEA
+    uint16_t sensor_value = 255; // <--- MODIFICA ESTA LÍNEA
 
     sensor_value = sensor_value + 5;
 

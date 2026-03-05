@@ -15,9 +15,16 @@ int main() {
     // Aquí ocurre el overflow. 1000 * 3,000,000 = 3,000,000,000
     // Eso es mayor que INT_MAX (2,147,483,647), así que da la vuelta (wrap around)
     // y se convierte en un número negativo o muy pequeño.
+
+    int costo_total;
+
+    if(cantidad_deseada > INT_MAX / precio_unitario){
+        costo_total = INT_MAX;
+    }else{
+        costo_total = precio_unitario * cantidad_deseada;
+    }
     
-    int costo_total = precio_unitario * cantidad_deseada;
-    
+
     // TAREA: Antes de multiplicar, verifica si habrá overflow.
     // if (cantidad_deseada > INT_MAX / precio_unitario) ...
     

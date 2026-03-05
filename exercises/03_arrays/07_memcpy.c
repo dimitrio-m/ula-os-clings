@@ -13,6 +13,7 @@ int main() {
     
     // <--- ESCRIBE TU LLAMADA A memcpy AQUÍ ABAJO --->
     
+    memcpy(backup_storage, sensor_data, sizeof(sensor_data));
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (backup_storage[0] == 1.5 && backup_storage[4] == 5.9) {
