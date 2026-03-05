@@ -20,8 +20,9 @@ int main() {
     // CÓDIGO VULNERABLE (Tu misión es arreglar esto)
     // strcpy no verifica el tamaño del destino. Copia hasta encontrar un \0.
     // Esto desbordará 'username' y escribirá sobre 'is_admin'.
-    
-    strcpy(session.username, input_malicioso); // <--- CAMBIA ESTO
+
+    ///strcpy(session.username, input_malicioso); // <--- CAMBIA ESTO
+    snprintf(session.username, 8, "%s", input_malicioso);
     
     // PISTA PARA ARREGLARLO:
     // Usa 'snprintf(destino, tamaño, "%s", fuente)' para limitar la copia.
