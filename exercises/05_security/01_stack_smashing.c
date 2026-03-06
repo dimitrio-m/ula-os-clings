@@ -21,7 +21,7 @@ int main() {
     // strcpy no verifica el tamaño del destino. Copia hasta encontrar un \0.
     // Esto desbordará 'username' y escribirá sobre 'is_admin'.
     
-    strcpy(session.username, input_malicioso); // <--- CAMBIA ESTO
+    snprintf(session.username, sizeof(session.username), "%s", input_malicioso); // <--- CAMBIA ESTO
     
     // PISTA PARA ARREGLARLO:
     // Usa 'snprintf(destino, tamaño, "%s", fuente)' para limitar la copia.
