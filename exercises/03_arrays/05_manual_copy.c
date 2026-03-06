@@ -12,7 +12,11 @@ int main() {
     // RESTRICCIÓN 2: Debes utilizar una estructura de control iterativa.
 
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
-    
+
+    for(int i=0; i<5; ++i)
+    {
+        buffer_b[i] = buffer_a[i];
+    }
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     int checksum = 0;
