@@ -9,8 +9,9 @@ int main() {
     // utilizando el operador 'sizeof'. 
     // RESTRICCIÓN: Tienes estrictamente prohibido escribir el número 128.
     
-    size_t array_length = 0; // <--- MODIFICA ESTA LÍNEA
+    size_t array_length = sizeof(memory_blocks)/sizeof(memory_blocks[0]); // <--- MODIFICA ESTA LÍNEA
 
+    printf("%ld\n", array_length);
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (array_length == 128) {
         printf("✅ Correcto. Dominas el cálculo de longitudes de arreglos en tiempo de compilación.\n");
