@@ -16,6 +16,11 @@ int main() {
 
     // <--- ESCRIBE TU BUCLE AQUÍ ABAJO --->
     
+    for(int i=0; i<4; ++i)
+    {
+        *dst_ptr = *src_ptr;
+        ++dst_ptr; ++src_ptr;
+    }
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (dest_block[0] == 100 && dest_block[3] == 400) {

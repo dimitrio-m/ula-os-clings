@@ -10,6 +10,8 @@ int main() {
     Point p1 = {10, 20};
     Point *ptr = &p1;
 
+    ptr->x*=10;
+
     // TODO: Modifica 'x' usando el PUNTERO 'ptr', no la variable 'p1'.
     // Intenta usar el operador flecha (->).
     // Queremos que x pase de 10 a 100.

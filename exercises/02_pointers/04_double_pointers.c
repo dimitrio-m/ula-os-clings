@@ -14,6 +14,7 @@ int main() {
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
     
+    *(*l2_ptr) = 0xFF;
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (core_data == 0xFF) {

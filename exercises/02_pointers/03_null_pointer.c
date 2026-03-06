@@ -12,6 +12,7 @@ int main() {
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
     
+    danger_ptr = &safe_data;
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (danger_ptr == NULL) {
@@ -22,7 +23,7 @@ int main() {
     if (*danger_ptr == 100) {
         printf("✅ Correcto. Has redirigido el puntero a una región de memoria válida y segura.\n");
         return 0;
-    }
+    } 
 
     printf("❌ El puntero no es nulo, pero no apunta al dato esperado.\n");
     return 1;

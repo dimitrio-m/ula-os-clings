@@ -14,6 +14,8 @@ int main() {
     
     // TODO: Asigna los valores para pasar el test
     
+    char name[] = {'A','l','i','c','e','\0'};
+    s1.age = s1.average = 20; memcpy(s1.name,name,6);
     
     // VALIDACIÓN:
     if (s1.age == 20 && s1.average > 19.0 && strcmp(s1.name, "Alice") == 0) {
