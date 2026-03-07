@@ -33,6 +33,9 @@ int main() {
     int *hack = malloc(sizeof(struct User));
     *hack = 99999; 
 
+    free(hack);
+    hack = NULL;
+
     // Intentamos usar el puntero viejo. 
     // Si u fuera NULL, esto causaría un crash controlado (mejor que un hack silencioso).
     if (u != NULL) {
