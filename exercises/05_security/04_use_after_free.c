@@ -16,6 +16,7 @@ int main() {
 
     // Liberamos la memoria porque el usuario "se desconectó"
     free(u);
+    u = NULL;
 
     // ---------------------------------------------------------
     // CÓDIGO VULNERABLE
