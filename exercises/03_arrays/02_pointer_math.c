@@ -10,7 +10,8 @@ int main() {
     // y asígnala a 'target_ptr'.
     // RESTRICCIÓN: Tienes estrictamente prohibido usar el operador de indexación '[]'.
     
-    int *target_ptr = base_ptr; // <--- MODIFICA ESTA LÍNEA
+    int *target_ptr = base_ptr + 2; // <--- MODIFICA ESTA LÍNEA
+    // con el for se puede hacer de manera mas general
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (target_ptr != NULL) {

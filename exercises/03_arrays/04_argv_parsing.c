@@ -9,7 +9,7 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido usar cadenas de texto literales 
     // en tu respuesta (ej: no puedes escribir "--port=8080").
     
-    char *target_arg = NULL; // <--- MODIFICA ESTA LÍNEA
+    char *target_arg = *(cmd_args + 2); // <--- MODIFICA ESTA LÍNEA
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (target_arg != NULL && target_arg[2] == 'p' && target_arg[7] == '8') {
