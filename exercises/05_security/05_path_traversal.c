@@ -19,7 +19,7 @@ int main() {
     
     if (strstr(filename, "..") != NULL) {
         // ARREGLA ESTO: Descomenta la línea de abajo o implementa tu lógica
-        // es_seguro = 0;
+        es_seguro = 0;
     }
     // ---------------------------------------------------------
 

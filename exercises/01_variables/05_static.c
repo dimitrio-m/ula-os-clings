@@ -7,7 +7,7 @@ int process_request() {
     // RESTRICCIÓN: Tienes estrictamente prohibido mover la variable fuera de 
     // la función (no puede ser global).
     
-    int request_count = 0; // <--- MODIFICA ESTA LÍNEA
+    static int request_count = 0; // <--- MODIFICA ESTA LÍNEA
     
     request_count++;
     return request_count;

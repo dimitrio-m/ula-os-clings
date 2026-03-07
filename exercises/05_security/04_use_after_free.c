@@ -16,6 +16,7 @@ int main() {
 
     // Liberamos la memoria porque el usuario "se desconectó"
     free(u);
+    u = NULL;
 
     // ---------------------------------------------------------
     // CÓDIGO VULNERABLE
@@ -31,6 +32,9 @@ int main() {
     // (En un ataque real, el hacker controla esto)
     int *hack = malloc(sizeof(struct User));
     *hack = 99999; 
+
+    free(hack);
+    hack = NULL;
 
     // Intentamos usar el puntero viejo. 
     // Si u fuera NULL, esto causaría un crash controlado (mejor que un hack silencioso).
