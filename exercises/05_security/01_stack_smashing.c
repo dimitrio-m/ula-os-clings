@@ -21,7 +21,8 @@ int main() {
     // strcpy no verifica el tamaño del destino. Copia hasta encontrar un \0.
     // Esto desbordará 'username' y escribirá sobre 'is_admin'.
     
-    strcpy(session.username, input_malicioso); // <--- CAMBIA ESTO
+    snprintf(session.username, 8, "%s", input_malicioso); // <--- CAMBIADO
+    //strncpy(session.username, input_malicioso, 7); //También me funcionó strncpy ya que pude especificar que no se copien más de n caracteres de la fuente hacia el destino
     
     // PISTA PARA ARREGLARLO:
     // Usa 'snprintf(destino, tamaño, "%s", fuente)' para limitar la copia.

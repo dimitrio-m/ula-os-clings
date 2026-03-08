@@ -16,11 +16,14 @@ int main() {
     // Eso es mayor que INT_MAX (2,147,483,647), así que da la vuelta (wrap around)
     // y se convierte en un número negativo o muy pequeño.
     
-    int costo_total = precio_unitario * cantidad_deseada;
+    int costo_total = 0;
     
     // TAREA: Antes de multiplicar, verifica si habrá overflow.
-    // if (cantidad_deseada > INT_MAX / precio_unitario) ...
-    
+    if (cantidad_deseada > INT_MAX / precio_unitario) {
+        costo_total = saldo_usuario + 1;
+    } else {
+        costo_total = precio_unitario * cantidad_deseada;
+    }
     // ---------------------------------------------------------
 
     printf("Intentando comprar %d unidades.\n", cantidad_deseada);

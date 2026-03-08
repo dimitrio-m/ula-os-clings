@@ -11,7 +11,8 @@ int main() {
     // variable 'secure_flag' directamente.
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
-    
+    *access_port = 0xDEADBEEF; 
+    //La instrucción sería más clara de la siguiente forma: Escribe el valor hexadecimal 0xDEADBEEF en la variable a cuya dirección de memoria apunta 'access_port' 
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (secure_flag == 0xDEADBEEF) {
