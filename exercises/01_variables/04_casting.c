@@ -10,8 +10,9 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido modificar el valor o tipo de 'original_signal'.
     // BONUS: puedes optimizar el tipo de 'processed_signal' para que ocupe menos memoria sin perder la integridad de los datos?
 
-    char processed_signal = (char)original_signal; // <--- MODIFICA ESTA LÍNEA
+    uint16_t processed_signal = (uint16_t)original_signal; // <--- MODIFICA ESTA LÍNEA
 
+    printf("%d\n", processed_signal);
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (processed_signal == 1000) {
         printf("✅ Correcto. Has conservado la integridad de la estructura de bits original.\n");

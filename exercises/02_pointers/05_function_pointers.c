@@ -13,7 +13,7 @@ void delegate_execution(void (*callback)()) {
     // de forma explícita o directa dentro de esta función.
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
-    
+    callback();
 }
 
 int main() {
@@ -22,7 +22,7 @@ int main() {
     // ejecución de 'secure_routine'.
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
-    
+    delegate_execution(secure_routine); // paso direccion de memoria
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (execution_flag == 0x1A2B) {
