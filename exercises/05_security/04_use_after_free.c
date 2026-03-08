@@ -24,7 +24,7 @@ int main() {
     // Acceder a u->name aquí es indefinido (y peligroso).
     
     // TAREA: Después de un free, SIEMPRE asigna NULL al puntero para evitar accidentes.
-    // u = NULL;
+    u = NULL;
     // ---------------------------------------------------------
 
     // Simulamos que el sistema reutiliza esa memoria para otra cosa

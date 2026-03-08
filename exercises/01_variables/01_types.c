@@ -12,7 +12,7 @@ int main() {
     // Corrige el especificador de formato para que imprima el valor con 
     // exactamente una posición decimal.
     
-    printf("La suma es: %d\n", suma); // <--- MODIFICA ESTA LÍNEA
+    printf("La suma es: %.1f\n", suma); // <--- MODIFICADA
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (suma == 15.5f) {

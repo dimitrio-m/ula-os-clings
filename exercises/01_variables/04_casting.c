@@ -10,7 +10,8 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido modificar el valor o tipo de 'original_signal'.
     // BONUS: puedes optimizar el tipo de 'processed_signal' para que ocupe menos memoria sin perder la integridad de los datos?
 
-    char processed_signal = (char)original_signal; // <--- MODIFICA ESTA LÍNEA
+    short processed_signal = (short)original_signal; // <--- MODIFICADA
+    //Respuesta a bonus: Sí, por ejemplo con el tipo short, el cual es suficiente para almacenar el valor 1000 sin pérdida de datos, ya que short típicamente tiene un rango de -32768 a 32767.
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (processed_signal == 1000) {

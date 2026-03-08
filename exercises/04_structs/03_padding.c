@@ -15,7 +15,8 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido usar el operador sizeof() 
     // para asignar este valor. Debes analizar la estructura y escribir el literal entero exacto.
 
-    int expected_size = 5; // <--- MODIFICA ESTE VALOR
+    int expected_size = 8; // <--- MODIFICADO
+    // 1 byte del char + 3 bytes de padding + 4 bytes del int = 8 bytes en total
 
     if (sizeof(data) != expected_size) { 
         printf("❌ Error. Asumiste %d bytes, pero la memoria real ocupada es distinta.\n", expected_size);

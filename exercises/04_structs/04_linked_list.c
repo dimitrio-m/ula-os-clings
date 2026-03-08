@@ -6,7 +6,7 @@ struct Process {
     // INSTRUCCIÓN 1:
     // Declara un miembro llamado 'next' capaz de almacenar la 
     // dirección de memoria de otra estructura 'Process'.
-    
+    struct Process *next;
 };
 
 int main() {
@@ -15,8 +15,7 @@ int main() {
 
     // INSTRUCCIÓN 2:
     // Modifica 'p1' para que su miembro 'next' apunte a 'p2'.
-    
-    
+    p1.next = &p2;
     
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (p1.next == &p2 && p1.next->pid == 102) {
