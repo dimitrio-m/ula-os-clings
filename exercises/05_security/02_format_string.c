@@ -13,7 +13,7 @@ int main() {
     // Nunca pases el input del usuario directamente como primer argumento.
     // Si el usuario pone "%x", printf imprimirá datos de la pila (el secreto).
     
-    printf(input_usuario); // <--- CAMBIA ESTO
+    printf("%s", input_usuario); // <--- CAMBIA ESTO
     printf("\n");
 
     // PISTA PARA ARREGLARLO:

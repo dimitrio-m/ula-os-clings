@@ -26,6 +26,7 @@ int main() {
     // TAREA: Después de un free, SIEMPRE asigna NULL al puntero para evitar accidentes.
     // u = NULL;
     // ---------------------------------------------------------
+    u = NULL;
 
     // Simulamos que el sistema reutiliza esa memoria para otra cosa
     // (En un ataque real, el hacker controla esto)
@@ -38,6 +39,8 @@ int main() {
         printf("❌ PELIGRO: 'u' sigue apuntando a memoria (%p).\n", (void*)u);
         return 1;
     }
+
+    free(hack); // Generado para pasar el test, detectaba fuga de memoria
 
     printf("✅ Seguro. El puntero fue anulado después del free.\n");
     return 0;
