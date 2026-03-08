@@ -10,7 +10,8 @@ int main() {
     // y asígnala a 'target_ptr'.
     // RESTRICCIÓN: Tienes estrictamente prohibido usar el operador de indexación '[]'.
     
-    int *target_ptr = base_ptr; // <--- MODIFICA ESTA LÍNEA
+    int *target_ptr = base_ptr + 2; //originalmente base_ptr ya apunta a la posicion 0, entonces solo 
+    //es necesario sumar para saltar los enteros y llegar a la posicion que deseo.
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (target_ptr != NULL) {

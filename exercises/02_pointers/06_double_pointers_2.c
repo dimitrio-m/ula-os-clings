@@ -10,10 +10,9 @@ int backup_node = 0xBBBB;
 // dirección de memoria de 'backup_node'.
 // RESTRICCIÓN: Tienes estrictamente prohibido usar la palabra reservada 'return'.
 
-void failover_switch( /* TIPO Y NOMBRE DEL PARÁMETRO AQUÍ */ ) {
+void failover_switch(int **ptr) {
     
-    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
-    
+    *ptr = &backup_node;
 }
 
 int main() {
@@ -23,7 +22,7 @@ int main() {
     // Invoca la rutina 'failover_switch' pasando los argumentos necesarios 
     // para que 'system_ptr' sea redirigido al nodo de respaldo.
     
-    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    failover_switch(&system_ptr);
     
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---

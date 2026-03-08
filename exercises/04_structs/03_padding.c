@@ -15,7 +15,9 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido usar el operador sizeof() 
     // para asignar este valor. Debes analizar la estructura y escribir el literal entero exacto.
 
-    int expected_size = 5; // <--- MODIFICA ESTE VALOR
+    int expected_size = 8; // el tamaño real del struct es 8 bytes por como el compilador lee los datos(de 4 en 4) 
+    //el char ocupa el byte 0. El compilador añade 3 bytes de "padding" (1, 2 y 3) para alinear el 
+    //int a una dirección múltiplo de 4. El int ocupa los bytes 4, 5, 6 y 7. Total = 8 bytes.
 
     if (sizeof(data) != expected_size) { 
         printf("❌ Error. Asumiste %d bytes, pero la memoria real ocupada es distinta.\n", expected_size);

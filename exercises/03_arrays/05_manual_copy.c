@@ -11,9 +11,11 @@ int main() {
     // librería estándar como 'memcpy' o 'memmove'.
     // RESTRICCIÓN 2: Debes utilizar una estructura de control iterativa.
 
-    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    for (size_t i = 0; i < 5; i++)
+    {
+        buffer_b[i] = buffer_a[i];
+    }
     
-
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     int checksum = 0;
     for (int i = 0; i < 5; i++) checksum += buffer_b[i];

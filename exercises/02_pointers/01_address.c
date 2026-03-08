@@ -8,7 +8,7 @@ int main() {
     // Asigna la dirección de memoria de la variable 'target_register' 
     // al puntero 'memory_ptr'.
     
-    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    memory_ptr = &target_register;
     
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---

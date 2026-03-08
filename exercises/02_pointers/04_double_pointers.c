@@ -12,8 +12,7 @@ int main() {
     // las variables 'core_data' o 'l1_ptr' en tu solución. 
     // Debes operar exclusivamente a través de 'l2_ptr'.
     
-    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
-    
+    **l2_ptr = 0xFF;
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (core_data == 0xFF) {

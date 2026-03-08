@@ -14,8 +14,10 @@ int main() {
     int *src_ptr = source_block;
     int *dst_ptr = dest_block;
 
-    // <--- ESCRIBE TU BUCLE AQUÍ ABAJO --->
-    
+    for (size_t i = 0; i < 4; i++)
+    {
+        *(dst_ptr + i) = *(src_ptr + i);
+    }
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (dest_block[0] == 100 && dest_block[3] == 400) {

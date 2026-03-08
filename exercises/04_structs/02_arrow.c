@@ -14,6 +14,8 @@ int main() {
     // Intenta usar el operador flecha (->).
     // Queremos que x pase de 10 a 100.
 
+    ptr->x = 100;
+
     if (p1.x == 100) {
         printf("✅ Usaste la flecha correctamente.\n");
         return 0;
