@@ -11,7 +11,7 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido usar bucles (for/while). 
     // Debes calcular el tamaño total en bytes de forma dinámica usando 'sizeof'.
     
-    // <--- ESCRIBE TU LLAMADA A memcpy AQUÍ ABAJO --->
+    *memcpy(backup_storage,sensor_data,sizeof(sensor_data));
     
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---

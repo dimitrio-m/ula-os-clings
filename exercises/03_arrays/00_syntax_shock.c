@@ -8,7 +8,7 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido cambiar el nombre de la variable, 
     // su tipo de dato, o los valores numéricos internos.
 
-    int sys_config[4] = [10, 20, 30, 40]; // <--- MODIFICA ESTA LÍNEA
+    int sys_config[4] = {10, 20, 30, 40}; 
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     // Nota: Si el código no compila, reprobaste el ejercicio automáticamente.

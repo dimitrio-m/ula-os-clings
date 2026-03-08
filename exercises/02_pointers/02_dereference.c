@@ -10,7 +10,7 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido utilizar, nombrar o reasignar la 
     // variable 'secure_flag' directamente.
     
-    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    *access_port = 0xDEADBEEF;
     
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---

@@ -10,9 +10,8 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido modificar las líneas de 
     // declaración inicial de las variables.
     
-    // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    danger_ptr = &safe_data;
     
-
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (danger_ptr == NULL) {
         printf("❌ Segmentation Fault (Simulado). El puntero intentó acceder a la dirección 0x0.\n");
