@@ -13,7 +13,9 @@ int main() {
     struct Student s1;
     
     // TODO: Asigna los valores para pasar el test
-    
+    s1.age = 20;
+    s1.average = 19.4;
+    strcpy(s1.name, "Alice"); // Bucle for tambien funciona
     
     // VALIDACIÓN:
     if (s1.age == 20 && s1.average > 19.0 && strcmp(s1.name, "Alice") == 0) {
