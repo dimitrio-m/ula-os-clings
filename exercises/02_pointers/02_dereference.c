@@ -12,6 +12,7 @@ int main() {
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
     
+    *access_port = 0xDEADBEEF;
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (secure_flag == 0xDEADBEEF) {
