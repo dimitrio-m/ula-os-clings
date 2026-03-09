@@ -14,6 +14,9 @@ int main() {
     
     // TODO: Asigna los valores para pasar el test
     
+    strcpy(s1.name, "Alice");
+    s1.age = 20; 
+    s1.average = 19.5;
     
     // VALIDACIÓN:
     if (s1.age == 20 && s1.average > 19.0 && strcmp(s1.name, "Alice") == 0) {
