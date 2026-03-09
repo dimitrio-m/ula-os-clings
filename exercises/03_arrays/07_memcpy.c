@@ -12,7 +12,9 @@ int main() {
     // Debes calcular el tamaño total en bytes de forma dinámica usando 'sizeof'.
     
     // <--- ESCRIBE TU LLAMADA A memcpy AQUÍ ABAJO --->
-    
+    //size_t size = sizeof(sensor_data)/sizeof(sensor_data[0]);
+
+    memcpy(backup_storage, sensor_data, sizeof(sensor_data));
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (backup_storage[0] == 1.5 && backup_storage[4] == 5.9) {
