@@ -15,7 +15,14 @@ int main() {
     int *dst_ptr = dest_block;
 
     // <--- ESCRIBE TU BUCLE AQUÍ ABAJO --->
+    size_t size = sizeof(source_block)/sizeof(source_block[0]);
     
+    for(size_t i = 0; i < size; i++)
+    {
+        *dst_ptr = *src_ptr;
+        dst_ptr++;
+        src_ptr++;
+    }
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (dest_block[0] == 100 && dest_block[3] == 400) {

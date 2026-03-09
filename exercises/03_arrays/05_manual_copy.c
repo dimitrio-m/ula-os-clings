@@ -12,7 +12,12 @@ int main() {
     // RESTRICCIÓN 2: Debes utilizar una estructura de control iterativa.
 
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    size_t size = sizeof(buffer_a)/sizeof(buffer_a[0]);
     
+    for(size_t i = 0; i < size; i++)
+    {
+        buffer_b[i] = buffer_a[i]; 
+    }
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     int checksum = 0;
