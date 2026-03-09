@@ -12,7 +12,9 @@ int main() {
     // RESTRICCIÓN 2: Debes utilizar una estructura de control iterativa.
 
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
-    
+     for(int i = 0 ; i <  sizeof(buffer_a)/sizeof(buffer_a[0]);i++){
+        buffer_b[i] = buffer_a[i];
+    }
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     int checksum = 0;
@@ -26,3 +28,5 @@ int main() {
     printf("❌ Error de integridad. Los datos en el búfer de destino no coinciden con el origen.\n");
     return 1;
 }
+
+

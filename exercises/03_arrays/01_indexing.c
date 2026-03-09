@@ -9,7 +9,7 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido acceder a memoria fuera 
     // de los límites definidos del arreglo (Out-of-Bounds).
 
-    int tail_data = memory_buffer[10]; // <--- MODIFICA ESTA LÍNEA
+    int tail_data = memory_buffer[(sizeof(memory_buffer)/sizeof(memory_buffer[0]))-1]; // <--- MODIFICA ESTA LÍNEA
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (tail_data == 0xEE) {
