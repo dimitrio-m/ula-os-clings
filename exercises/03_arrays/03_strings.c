@@ -8,7 +8,7 @@ int main() {
     // RESTRICCIÓN: Tienes estrictamente prohibido usar la notación de 
     // comillas dobles (ej: "ULA"). Debes inicializar los elementos usando llaves {}.
 
-    char institution[] = {'U', 'L', 'A'}; // <--- MODIFICA ESTA LÍNEA
+    char institution[4] = {'U', 'L', 'A','\0'}; // <--- MODIFICA ESTA LÍNEA
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (sizeof(institution) == 4) {

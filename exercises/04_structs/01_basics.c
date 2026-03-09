@@ -11,9 +11,11 @@ struct Student {
 int main() {
     // Inicialización
     struct Student s1;
-    
+
     // TODO: Asigna los valores para pasar el test
-    
+    s1.age = 20;
+    s1.average = 21.0;
+    strcpy(s1.name, "Alice");
     
     // VALIDACIÓN:
     if (s1.age == 20 && s1.average > 19.0 && strcmp(s1.name, "Alice") == 0) {
