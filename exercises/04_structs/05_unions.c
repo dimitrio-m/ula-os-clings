@@ -14,7 +14,7 @@ int main() {
     // Extrae el byte menos significativo de 'full_value' utilizando 
     // exclusivamente el arreglo 'bytes' de la unión. Asigna el resultado a 'low_byte'.
     
-    uint8_t low_byte = 0; // <--- MODIFICA ESTA LÍNEA
+    uint8_t low_byte = reg.bytes[0]; // <--- MODIFICA ESTA LÍNEA
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (low_byte == 0x11) {
