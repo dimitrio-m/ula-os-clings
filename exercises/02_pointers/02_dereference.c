@@ -11,6 +11,7 @@ int main() {
     // variable 'secure_flag' directamente.
     
     // <--- ESCRIBE TU CÓDIGO AQUÍ ABAJO --->
+    *access_port = 0xDEADBEEF;
     
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
