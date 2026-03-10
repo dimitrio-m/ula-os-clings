@@ -15,6 +15,10 @@ int main() {
     int *dst_ptr = dest_block;
 
     // <--- ESCRIBE TU BUCLE AQUÍ ABAJO --->
+    for(int i = 0; i < 4; ++i)
+    {
+        *(dest_block + i) = *(source_block + i);
+    }
     
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
