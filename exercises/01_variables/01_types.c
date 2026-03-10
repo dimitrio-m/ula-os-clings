@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int a = 10;
+    float a = 10.0;
     float b = 5.5;
     
     float suma = a + b;
@@ -12,7 +12,7 @@ int main() {
     // Corrige el especificador de formato para que imprima el valor con 
     // exactamente una posición decimal.
     
-    printf("La suma es: %d\n", suma); // <--- MODIFICA ESTA LÍNEA
+    printf("La suma es: %g\n", suma); // <--- MODIFICA ESTA LÍNEA
 
     // --- ZONA DE VALIDACIÓN (No modificar) ---
     if (suma == 15.5f) {
